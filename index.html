@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Health Community | Bhilai Wellness Center</title>
+    <title>Online Health Community | Bhilai</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary: #2ecc71;   /* Fresh Green */
-            --dark: #2c3e50;      /* Dark Blue/Grey */
-            --light: #ecf0f1;     /* Light Grey */
-            --accent: #e67e22;    /* Orange for Call to Actions */
-        }
+        /* --- CSS VARIABLES & RESET (Same as before) --- */
+        :root { --primary: #2ecc71; --dark: #2c3e50; --light: #ecf0f1; --accent: #e67e22; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; }
         a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-
+        
         /* --- NAVIGATION --- */
         nav { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
@@ -25,62 +19,44 @@
         .nav-links a { font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
         .book-btn { background: var(--accent); color: white; padding: 8px 20px; border-radius: 50px; font-weight: 600; }
-        
-        /* Mobile Menu Toggle */
         .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
 
-        /* --- HERO SECTION --- */
-        #home {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=80');
-            background-size: cover; background-position: center;
-            height: 80vh; color: white; display: flex; flex-direction: column; 
-            justify-content: center; align-items: center; text-align: center; padding: 20px;
-        }
-        #home h1 { font-size: 3rem; margin-bottom: 10px; }
-        #home p { font-size: 1.2rem; margin-bottom: 20px; max-width: 600px; }
-        .cta-main { background: var(--primary); color: white; padding: 15px 40px; border-radius: 50px; font-size: 1.1rem; font-weight: bold; transition: 0.3s; }
-        .cta-main:hover { background: #27ae60; transform: scale(1.05); }
-
-        /* --- SECTIONS GENERAL --- */
+        /* --- SECTIONS --- */
         section { padding: 60px 20px; max-width: 1200px; margin: auto; }
         h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--dark); position: relative; }
         h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--primary); margin: 10px auto; }
-
-        /* --- SERVICES GRID --- */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
-
-        /* --- ABOUT US --- */
-        .about-content { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
-        .about-text { flex: 1; min-width: 300px; }
-        .about-img { flex: 1; min-width: 300px; height: 300px; background: #ddd; border-radius: 10px; background: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80') center/cover; }
-
-        /* --- SPECIAL OFFER BANNER --- */
-        .offer-banner { background: var(--dark); color: white; padding: 40px 20px; text-align: center; border-radius: 10px; margin: 40px 20px; }
-        .offer-banner h3 { color: var(--accent); font-size: 1.8rem; margin-bottom: 10px; }
-
-        /* --- CONTACT & MAP --- */
-        .contact-container { display: flex; flex-wrap: wrap; gap: 30px; }
-        .contact-info { flex: 1; min-width: 300px; background: #f9f9f9; padding: 30px; border-radius: 10px; }
-        .map-frame { flex: 1; min-width: 300px; height: 350px; border-radius: 10px; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: 0; }
-
-        /* --- FOOTER --- */
-        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 50px; }
         
-        /* --- FLOATING WHATSAPP BUTTON --- */
-        .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 2000; transition: 0.3s; }
-        .float-wa:hover { transform: scale(1.1); }
+        /* --- HERO --- */
+        #home { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=80'); background-size: cover; height: 80vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        #home h1 { font-size: 3rem; margin-bottom: 10px; }
+        .cta-main { background: var(--primary); color: white; padding: 15px 40px; border-radius: 50px; font-weight: bold; }
 
-        /* --- MOBILE RESPONSIVENESS --- */
+        /* --- BLOG / UPDATES SECTION --- */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .blog-card { border: 1px solid #eee; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .blog-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .blog-img { height: 200px; background: #ddd; background-size: cover; background-position: center; }
+        .blog-content { padding: 20px; }
+        .blog-date { font-size: 0.8rem; color: #888; }
+        .blog-title { font-size: 1.2rem; margin: 10px 0; color: var(--dark); }
+
+        /* --- REVIEWS SECTION --- */
+        .reviews-container { background: #f9f9f9; padding: 60px 20px; }
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+        .review-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .stars { color: #f1c40f; margin-bottom: 10px; }
+        .client-name { font-weight: bold; margin-top: 10px; color: var(--dark); text-align: right; }
+
+        /* --- FOOTER & FLOATING BTN --- */
+        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+        .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 2000; }
+
+        /* --- MOBILE --- */
         @media (max-width: 768px) {
-            #home h1 { font-size: 2.2rem; }
             .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; right: 0; background: white; width: 100%; text-align: center; padding: 20px 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
             .nav-links.active { display: flex; }
             .menu-toggle { display: block; }
-            .about-content { flex-direction: column-reverse; }
+            #home h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -90,96 +66,80 @@
         <div class="logo">Online Health Community</div>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="nav-links" id="navLinks">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-            <a href="https://wa.me/918085639442" class="book-btn">Book Now</a>
+            <a href="index.html">Home</a>
+            <a href="#updates">Updates</a>
+            <a href="gallery.html">Photo Gallery</a> <a href="#reviews">Reviews</a>
+            <a href="https://wa.me/91XXXXXXXXXX" class="book-btn">Book Visit</a>
         </div>
     </nav>
 
     <section id="home">
-        <h1>Transform Your Health in Bhilai</h1>
-        <p>Personalized Nutrition, Weight Loss, and Wellness Coaching. Join the community that cares about your long-term health.</p>
-        <a href="#contact" class="cta-main">Start Your Transformation</a>
+        <h1>Welcome to Your Wellness Family</h1>
+        <p>Bhilai's most supportive community for nutrition and health.</p>
+        <br>
+        <a href="https://wa.me/91XXXXXXXXXX" class="cta-main">Book Free Consultation</a>
     </section>
 
-    <div class="offer-banner">
-        <h3>🔥 December Special Offer!</h3>
-        <p>Visit us at Plot 30B for a <strong>FREE Body Composition Analysis</strong>. Limited slots available this week.</p>
+    <section id="updates">
+        <h2>Latest Community Updates</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="blog-content">
+                    <span class="blog-date">Weekly Update</span>
+                    <h3 class="blog-title">Winter Nutrition Tips ❄️</h3>
+                    <p>Beat the cold with these 3 immunity-boosting foods available in Bhilai markets right now.</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="blog-content">
+                    <span class="blog-date">Success Story</span>
+                    <h3 class="blog-title">Congratulations to Mrs. Sharma! 🎉</h3>
+                    <p>She lost 4kgs this month just by correcting her dinner timings. Come ask her how!</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="blog-content">
+                    <span class="blog-date">Event Alert</span>
+                    <h3 class="blog-title">Sunday Morning Yoga 🧘‍♀️</h3>
+                    <p>Join us this Sunday at Plot 30B for a free flexibility session. Bring a friend!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="reviews-container" id="reviews">
+        <h2>What Our Members Say</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The best decision I made for my health. The coaches at Plot 30B are so supportive and knowledgeable."</p>
+                <div class="client-name">- Rahul Verma</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"I never thought weight loss could be this fun. The community vibe keeps me motivated everyday!"</p>
+                <div class="client-name">- Priya Singh</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Excellent guidance on nutrition. No crash diets, just healthy eating habits."</p>
+                <div class="client-name">- Amit K.</div>
+            </div>
+        </div>
     </div>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="icon">🥗</div>
-                <h3>Weight Loss</h3>
-                <p>Scientific diet plans that fit your lifestyle. No starvation, just real food.</p>
-            </div>
-            <div class="card">
-                <div class="icon">💪</div>
-                <h3>Muscle Gain</h3>
-                <p>Specific nutrition strategies to build strength and lean muscle mass.</p>
-            </div>
-            <div class="card">
-                <div class="icon">❤️</div>
-                <h3>Health Coaching</h3>
-                <p>Manage diabetes, BP, and PCOD with expert lifestyle guidance.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About The Community</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>More Than Just a Clinic</h3>
-                <p>Located in the heart of Bhilai, we are a community dedicated to wellness. We understand that health isn't just about numbers on a scale; it's about how you feel every day.</p>
-                <br>
-                <p>Whether you are a student, a homemaker, or a professional, our doors at Plot 30B are open for you. We provide a supportive environment where you can learn, grow, and achieve your health goals.</p>
-            </div>
-            <div class="about-img"></div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Visit Us</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>📍 Location</h3>
-                <p><strong>Online Health Community</strong><br>
-                Plot 30B, Bhilai<br>
-                Chhattisgarh 490020</p>
-                
-                <h3 style="margin-top: 20px;">🕒 Opening Hours</h3>
-                <p>Mon - Sat: 9:00 AM - 8:00 PM<br>
-                Sunday: Closed</p>
-
-                <h3 style="margin-top: 20px;">📞 Contact</h3>
-                <p>Call or WhatsApp us to book:</p>
-                <a href="https://wa.me/918085639442" class="cta-main" style="display:inline-block; margin-top:10px;">Chat on WhatsApp</a>
-            </div>
-            
-            <div class="map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.5490974581!2d81.33!3d21.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a292d3b095c67b5%3A0xb5384f3cfcad3db!2sPlot%2030B%2C%20Bhilai%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
     <footer>
-        <p>&copy; 2024 Online Health Community Bhilai. All Rights Reserved.</p>
+        <p>Plot 30B, Bhilai, Chhattisgarh | Call: +91 XXXXXXXXXX</p>
+        <p>© 2024 Online Health Community</p>
     </footer>
 
-    <a href="https://wa.me/918085639442" class="float-wa" target="_blank" title="Chat with us">
-        💬
-    </a>
+    <a href="https://wa.me/91XXXXXXXXXX" class="float-wa">💬</a>
 
     <script>
-        function toggleMenu() {
-            const nav = document.getElementById('navLinks');
-            nav.classList.toggle('active');
-        }
+        function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
     </script>
 </body>
 </html>
